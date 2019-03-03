@@ -1,0 +1,65 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is an example of using OAuth2 Access Code Flow in a specification to describe security to Passenger PNRs.",
+    "version" : "1.0.0",
+    "title" : "Passenger_PNRs",
+    "termsOfService" : "http://LATAM_API_Portal/terms/",
+    "contact" : {
+      "name" : "API Foundational Team",
+      "url" : "http://LATAM_API_Portal/support",
+      "email" : "api-strategy@latam.com"
+    },
+    "license" : {
+      "name" : "LATAM internal use",
+      "url" : "http://LATAM_API_Portal/license"
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/LATAM_Pilot/Passenger_PNRs/1.0.0",
+  "schemes" : [ "https" ],
+  "security" : [ {
+    "accessCode" : [ "read", "write" ]
+  } ],
+  "paths" : {
+    "/hello" : {
+      "get" : {
+        "tags" : [ "reference_implementation" ],
+        "summary" : "Hello Passenger",
+        "description" : "Hello Passenger provides a reference implementation for this sample resource.",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    },
+    "/ping" : {
+      "get" : {
+        "summary" : "Server heartbeat operation.",
+        "description" : "This operation shows how to override the global security defined above, as we want to open it up for all users.",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        },
+        "security" : [ ]
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "accessCode" : {
+      "type" : "oauth2",
+      "authorizationUrl" : "http://example.com/oauth/auth",
+      "tokenUrl" : "http://example.com/oauth/token",
+      "flow" : "accessCode",
+      "scopes" : {
+        "write" : "allows modifying resources",
+        "read" : "allows reading resources"
+      }
+    }
+  },
+  "definitions" : { }
+}
