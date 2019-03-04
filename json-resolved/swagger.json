@@ -24,7 +24,7 @@
   "paths" : {
     "/hello" : {
       "get" : {
-        "tags" : [ "reference_implementation" ],
+        "tags" : [ "reference_implementation", "customer_domain", "non_standard" ],
         "summary" : "Hello Passenger",
         "description" : "Hello Passenger provides a reference implementation for this sample resource.",
         "parameters" : [ ],
