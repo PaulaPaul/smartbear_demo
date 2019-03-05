@@ -3,7 +3,7 @@
   "info" : {
     "description" : "This is an example of using OAuth2 Access Code Flow in a specification to describe security to Passenger PNRs.",
     "version" : "1.0.0",
-    "title" : "Passenger_PNRs",
+    "title" : "Passengers",
     "termsOfService" : "http://LATAM_API_Portal/terms/",
     "contact" : {
       "name" : "API Foundational Team",
@@ -16,7 +16,7 @@
     }
   },
   "host" : "virtserver.swaggerhub.com",
-  "basePath" : "/LATAM_Pilot/Passenger_PNRs/1.0.0",
+  "basePath" : "/LATAM_Pilot/Passengers/1.0.0",
   "schemes" : [ "https" ],
   "security" : [ {
     "accessCode" : [ "read", "write" ]
