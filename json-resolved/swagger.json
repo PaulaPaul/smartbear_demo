@@ -38,6 +38,19 @@
     "/ping" : {
       "get" : {
         "tags" : [ "observability" ],
+        "summary" : "Server heartbeat operation.",
+        "description" : "This operation shows how to override the global security defined above, as we want to open it up for all users.",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    },
+    "/metrics" : {
+      "get" : {
+        "tags" : [ "observability" ],
         "summary" : "Standard metrics endpoint.",
         "description" : "This operation shows how to override the global security defined above, as we want to open it up for all users.",
         "parameters" : [ ],
